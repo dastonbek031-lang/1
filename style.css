@@ -1,98 +1,225 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-    background: #ffffff;
-    color: #1a1a1a;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #f8f5ff, #ffffff);
+  color: #1c1c1c;
+  min-height: 100vh;
+}
+
+/* Umumiy container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Chap taraf (matn qismi) --- */
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ghost logosi yonma-yon */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-wrapper img {
+  width: 41px;
+  height: 41px;
+  object-fit: contain;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  color: #1c1c1c;
+}
+
+.logo span {
+  color: #6b4eff;
+}
+
+/* NEW GHOST BROWSER */
+.badge {
+  color: #ff2b63;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Isolate Your Identities */
+.text-section h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.text-section .desc {
+  font-size: 18px;
+  color: #666;
+  max-width: 420px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Tugmalar */
+.btn {
+  width: 180px;
+  display: inline-block;
+  background: #6b4eff;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #5538e4;
+  transform: translateY(-2px);
+}
+
+.explore-now {
+  margin-top: 16px;
+  color: #6b4eff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.explore-now:hover {
+  color: #5538e4;
+}
+
+/* --- O‘ng taraf (rasm + navbar) --- */
+.image-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6b4eff;
+}
+
+/* O‘ng tarafdagi rasm */
+.image-section img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-top: 80px;
+  object-fit: contain;
+  transition: 0.5s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Pastki yozuvlar */
+.image-footer {
+  width: 90%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+}
+
+.feature-text {
+  font-weight: 600;
+  color: #6b4eff;
+}
+
+.arrows span {
+  font-size: 22px;
+  color: #555;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrows span:hover {
+  color: #6b4eff;
+  transform: translateY(-2px);
+}
+
+.page-number {
+  font-weight: 600;
+  color: #000;
+}
+
+.page-number .gray {
+  color: #a79e9e;
+}
+
+/* Responsiv */
+@media (max-width: 900px) {
   .container {
-    width: 90%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
   }
-  
-  /* Chapdagi yozuv qismi */
-  .text-section {
-    flex: 1;
-  }
-  
+
   .text-section h1 {
-    font-size: 64px;
-    font-weight: 700;
-    color: #6b4eff; /* binafsha rang */
-    line-height: 1.1;
-    margin-bottom: 20px;
+    font-size: 42px;
   }
-  
-  .text-section p {
-    font-size: 18px;
-    color: #5f5b6b;
-    max-width: 420px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .btn {
-    display: inline-block;
-    background: #6b4eff;
-    color: #fff;
-    padding: 14px 32px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-  
-  .btn:hover {
-    background: #5538e4;
-    transform: translateY(-2px);
-  }
-  
-  /* O'ngdagi rasm qismi */
-  .image-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
+
+  .logo-wrapper {
     justify-content: center;
-    position: relative;
   }
-  
+
   .image-section img {
-    width: 90%;
-    max-width: 500px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(107, 78, 255, 0.25);
+    max-width: 380px;
+    margin-top: 40px;
   }
-  
-  /* Mobil uchun moslashuv */
-  @media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .text-section h1 {
-      font-size: 48px;
-    }
-  
-    .text-section p {
-      margin: 0 auto 30px;
-    }
-  
-    .image-section img {
-      max-width: 400px;
-    }
+
+  .nav-links {
+    display: none;
   }
-  
+}
